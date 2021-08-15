@@ -20,7 +20,7 @@ class App extends React.Component {
     return(
       <>
         <Router>
-          <IsLoadingAndError>
+          
             <Header auth0={this.props.auth0}/>
             <Switch>
               <Route exact path="/">
@@ -33,7 +33,7 @@ class App extends React.Component {
               </Route>
             </Switch>
             <Footer />
-          </IsLoadingAndError>
+         
         </Router>
       </>
     );
