@@ -21,13 +21,14 @@
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
 
+
 ## Time Estimates
-Name of feature: ________________________________
+Name of feature: use Auth0 and display login and logout
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete:2 hour
 
-Start time: _____
+Start time:2:00
 
-Finish time: _____
+Finish time:6:00
 
-Actual time needed to complete: _____
+Actual time needed to complete:3hours
