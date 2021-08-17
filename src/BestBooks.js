@@ -78,7 +78,7 @@ class MyFavoriteBooks extends React.Component {
         {this.state.data.map((item) => {
           return (
 
-            <Carousel.Item style={{textAlign:'center'}}>
+            <Carousel.Item style={{textAlign:'center'}} key={item._id}>
               <h1>{item.title}</h1>
               <h2>{item.description} </h2>
               <h3>{item.status}</h3>
