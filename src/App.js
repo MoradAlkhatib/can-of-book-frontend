@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { withAuth0 } from '@auth0/auth0-react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './Login';
 import BestBooks from './BestBooks';
 import {
@@ -41,4 +42,4 @@ class App extends React.Component {
 
 export default withAuth0(App);
 
-//
+////
