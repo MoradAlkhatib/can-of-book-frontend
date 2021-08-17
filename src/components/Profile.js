@@ -22,7 +22,7 @@ class Profile extends Component {
   render() {
     return (
       <div>
-        <img src={this.props.auth0.user.picture} alt={this.props.auth0.user.name} />
+      <img src={this.props.auth0.user.picture} alt={this.props.auth0.user.name} />
       <h2>{this.props.auth0.user.name}</h2>
       <p>{this.props.auth0.user.email}</p>
       </div>
