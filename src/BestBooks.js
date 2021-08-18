@@ -28,6 +28,23 @@ class MyFavoriteBooks extends React.Component {
 
   }
 
+  submitDelete=(index)=>{
+    console.log(index);
+    let config={
+      email:this.props.auth0.user.email,
+      
+    }
+ 
+    axios.delete(`http://localhost:8000/books-delete/${index}`,{params:config}).then(res=>{
+      this.setState({
+       data:res.data 
+      })
+    })
+ 
+   }
+
+
+
   submitPost=(e)=>{
    e.preventDefault();
    let config={
@@ -75,13 +92,16 @@ class MyFavoriteBooks extends React.Component {
         <h1>My Favorite Books</h1>
         <p>This is a collection of my favorite books</p>
         <Carousel>
-        {this.state.data.map((item) => {
+        {this.state.data.map((item,index) => {
           return (
 
-            <Carousel.Item style={{textAlign:'center'}} key={item._id}>
+            <Carousel.Item style={{textAlign:'center'}} key={index}>
               <h1>{item.title}</h1>
               <h2>{item.description} </h2>
               <h3>{item.status}</h3>
+              <div style={{textAlign:"center" }}>
+                <Button onClick={()=>this.submitDelete(index)} variant="danger" style={{marginRight:"20px"}}> Delete Book</Button>
+                <Button variant="warning">Update Book</Button></div>
             </Carousel.Item>
           );
         })}
